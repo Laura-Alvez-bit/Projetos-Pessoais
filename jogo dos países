@@ -1,0 +1,48 @@
+# entrando no jogo
+
+nome = input("ME DIGA SEU NOME PARA COMEÇAR-MOS...\n").upper()
+print(f"OK {nome} VAMOS JOGAR ✨O JOGO DOS PAÍSES✨\n")
+
+print("    \033[36mJOGO DOS PAÍSES🌍❤️\033[0m")
+
+# começando
+
+pais_escoli = print("\033[36mADIVINHE QUAL PAÍS QUE TEM TRADIÇAO DE \nPRODUZIR IORGUTE A 4.OOO ANOS\033[0m")
+
+pais_tent = input("""
+QUAL PAÍS VOCE ACHA QUE É?:
+
+[1] BÉLGICA
+[2] BULGARIA
+[3] BRASIL
+[4] BOLIVIA
+""")
+
+match pais_tent:
+    case '1':
+        print("\033[31mNão voce errou...")
+    case '2':
+        print(f"\033[32mOlha voce acertou, parabens {nome}🥳")
+    case '3':
+        print("\033[31mNão voce errou...")
+    case '4':
+        print("\033[31mNão voce errou...")
+    case _:
+        print("\033[33mOpção inválida...")
+
+# zerando o jogo
+
+while True:
+    continuar = input("Digite (S) para sair ou (C) para continuar\n")
+    if continuar.upper() == 'S':
+        print("\033[31mMAS JÁ ????😓")
+        break
+    print(f"\n\033[32mAAAAAEEE CARAI VAMOS {nome}🥳\n\033[0m")
+
+
+    pais_escoli = input("ADIVINHE QUANTOS CONFLITOS \nA RÚSSIA JÁ SE ENVOLVEU\n")
+    if pais_escoli == '11':
+        print(f"\033[33m VOCE ACERTOU PARABENS {nome}\033[0m")
+    else:
+        print("\033[31m VOCE ERROU MANO \nEU FALEI DA RÚSSIA CARA KKKK")
+        break
