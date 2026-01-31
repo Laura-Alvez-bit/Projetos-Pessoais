@@ -1,0 +1,35 @@
+base_de_dados = []
+
+def criar_cadastro():
+    print("--- Novo Cadastro ---\n")
+
+    nome = input("Digite o nome completo: \n").strip()
+    email = input("Digite o e-mail:\n ").strip()
+    idade = input("Digite a idade: \n").strip()
+    cep = input("Digite seu CEP : \n").strip()
+
+    if nome and email and idade and cep:
+
+        cliente = {
+            "nome": nome,
+            "email": email,
+            "idade": idade,
+            "cep" : cep
+        }
+
+
+        base_de_dados.append(cliente)
+        print(f"\n✅ Sucesso: {nome} foi cadastrado!")
+    else:
+        print("\n❌ Erro: Todos os campos são obrigatórios.")
+
+def mostrar_clientes():
+    if not base_de_dados:
+        print("\033[91m\nNENHUM CLIENTE CADASTRADO.\033[0m")
+    else:
+        print("\033[92m\n--- CLIENTES CADASTRADOS---\033[0m")
+        for i, u in enumerate(base_de_dados, 1):
+            print(f"{i}. Nome: {u['nome']} \n| E-mail: {u['email']} \n| Idade: {u['idade']} \n| Cep: {u['cep']} " )
+
+criar_cadastro()
+mostrar_clientes()
